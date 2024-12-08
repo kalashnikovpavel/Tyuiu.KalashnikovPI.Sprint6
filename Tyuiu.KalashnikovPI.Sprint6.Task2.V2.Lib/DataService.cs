@@ -12,7 +12,7 @@ namespace Tyuiu.KalashnikovPI.Sprint6.Task2.V2.Lib
             int count = 0;
             for (int x = startValue; x <= stopValue; x++)
             {
-                y = Math.Round((Math.Sin(x) + (2/3*x+0.5) - 2*Math.Cos(x) * 2 * x), 2);
+                y = Math.Round((Math.Sin(x) + (2/(3*x+0.5)) - 2*Math.Cos(x) * (2 * x)), 2);
                 valueArray[count] = y;
                 count++;
             }
