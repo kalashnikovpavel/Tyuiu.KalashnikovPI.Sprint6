@@ -42,14 +42,14 @@ namespace Tyuiu.KalashnikovPI.Sprint6.Task3.V20
                 }
             }
 
-            textBox2.Clear(); // Очищаем текстовое поле перед добавлением новых значений
+            textBox2.Clear(); 
             for (int i = 0; i < mtrx.GetLength(0); i++)
             {
                 for (int j = 0; j < mtrx.GetLength(1); j++)
                 {
                     textBox2.AppendText(mtrx[i, j].ToString() + " ");
                 }
-                textBox2.AppendText(Environment.NewLine); // Переход на новую строку после каждой строки массива
+                textBox2.AppendText(Environment.NewLine); 
             }
         }
     }
