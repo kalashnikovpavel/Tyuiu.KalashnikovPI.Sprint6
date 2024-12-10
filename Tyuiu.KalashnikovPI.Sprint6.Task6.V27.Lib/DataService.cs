@@ -5,10 +5,9 @@ namespace Tyuiu.KalashnikovPI.Sprint6.Task6.V27.Lib
 {
     public class DataService : ISprint6Task6V27
     {
-        public string CollectTextFromFile(string str, string path)
-        {
+        public string CollectTextFromFile(string path)
+        {          
             StringBuilder result = new StringBuilder();
-            
             using (StreamReader reader = new StreamReader(path))
             {
                 string line;
@@ -17,16 +16,15 @@ namespace Tyuiu.KalashnikovPI.Sprint6.Task6.V27.Lib
                     string[] words = line.Split(' ', StringSplitOptions.RemoveEmptyEntries);
                     foreach (var word in words)
                     {
-                        
                         if (word.Contains("H"))
                         {
-                            
                             result.Append(word + " ");
                         }
+
                     }
                 }
+                return result.ToString().Trim();
             }
-            return result.ToString().Trim();
         }
     }
 }
